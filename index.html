@@ -291,6 +291,40 @@
       #eight:hover {
         color: white;
       }
+
+      #spinner1 {
+        margin: 100px;
+        position: relative;
+      }
+
+      #rectangle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        animation: turn 2s ease-in-out 0s infinite;
+      }
+
+      #rectangle2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: greenyellow;
+        animation: turn 2s ease-in-out 1s infinite;
+      }
+
+      @keyframes turn {
+        0% {
+          transorm: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
     </style>
   </head>
   <body>
@@ -302,5 +336,10 @@
     <button id="six">Hover</button>
     <button id="seven"><span id="text">Hover</span></button>
     <button id="eight">Hover</button>
+
+    <div id="spinner1">
+      <div id="rectangle"></div>
+      <div id="rectangle2"></div>
+    </div>
   </body>
 </html>
